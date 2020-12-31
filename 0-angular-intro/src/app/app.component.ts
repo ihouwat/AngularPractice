@@ -6,5 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-practice';
+
+  
+  data = {
+    title: 'angular-practice'
+  };
+
+  onButtonClicked() {
+
+    alert('Hello World');
+  
+  };
+
+  onKeyUp(newTitle: string) {
+
+    this.data.title = newTitle;
+  
+  }
+
 }
