@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {COURSES} from '../db-data';
+import {Course} from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,18 @@ import {COURSES} from '../db-data';
 })
 export class AppComponent {
 
-  coreCourse = COURSES[0];
+  courses = COURSES;
 
-  rxjsCourse = COURSES[1];
+  startDate = new Date(2000, 0, 1);
 
-  ngrxCourse = COURSES[2];
+  price = 9.99;
+
+  rate = 0.67;
+
+  course = COURSES[0];
+
+  onCourseSelected(course: Course) {
+    console.log(course);
+  }
 
 }
